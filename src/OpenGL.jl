@@ -11,6 +11,9 @@ if OpenGLver == "1.0"
 elseif OpenGLver == "2.1"
     require("OpenGL/src/gl21/gl21")
     require("OpenGL/src/gl21/gl21aux")
+elseif OpenGLver == "3.2"
+    require("OpenGL/src/gl32/gl32")
+    require("OpenGL/src/gl32/gl32aux")
 elseif OpenGLver == "3.3"
     require("OpenGL/src/gl33/gl33")
     require("OpenGL/src/gl33/gl33aux")
