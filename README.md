@@ -5,7 +5,7 @@ and GLUT packages include this package by default.)
 
 This package is intended to be a fully fledged
 [Julia](http://www.julialang.org) interface to the OpenGL implementation
-on your machine.  OpenGL 1.0, OpenGL 2.1, 3.3, and 4.2/4.3 and GLU
+on your machine.  OpenGL 1.0, 2.1, 3.2, 3.3, and 4.2/4.3 and GLU
 functionality is available.  Also, ATI and Nvidia specific functions are
 available, as well as stereo display functions (see "Specialized OpenGL
 code" below).
@@ -32,6 +32,10 @@ using OpenGL
 
 #Use OpenGL 2.1
 global OpenGLver="2.1"
+using OpenGL
+
+#Use OpenGL 3.2
+global OpenGLver="3.2"
 using OpenGL
 
 #Use OpenGL 3.3
