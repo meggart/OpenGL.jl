@@ -95,11 +95,11 @@ export glEnableClientState
 export glDisableClientState
 @getCFun "libGL" glGetBooleanv glGetBooleanv(pname::GLenum,params::Ptr)::Void
 export glGetBooleanv
-@getCFun "libGL" glGetDoublev glGetDoublev(pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glGetDoublev glGetDoublev(pname::GLenum,params::Ptr{GLdouble})::Void
 export glGetDoublev
-@getCFun "libGL" glGetFloatv glGetFloatv(pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glGetFloatv glGetFloatv(pname::GLenum,params::Ptr{GLfloat})::Void
 export glGetFloatv
-@getCFun "libGL" glGetIntegerv glGetIntegerv(pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glGetIntegerv glGetIntegerv(pname::GLenum,params::Ptr{GLint})::Void
 export glGetIntegerv
 @getCFun "libGL" glPushAttrib glPushAttrib(mask::GLbitfield)::Void
 export glPushAttrib
@@ -499,29 +499,29 @@ export glLighti
 export glLightfv
 @getCFun "libGL" glLightiv glLightiv(light::GLenum,pname::GLenum,params::Ptr)::Void
 export glLightiv
-@getCFun "libGL" glGetLightfv glGetLightfv(light::GLenum,pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glGetLightfv glGetLightfv(light::GLenum,pname::GLenum,params::Ptr{Float32})::Void
 export glGetLightfv
-@getCFun "libGL" glGetLightiv glGetLightiv(light::GLenum,pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glGetLightiv glGetLightiv(light::GLenum,pname::GLenum,params::Ptr{Uint8})::Void
 export glGetLightiv
 @getCFun "libGL" glLightModelf glLightModelf(pname::GLenum,param::GLfloat)::Void
 export glLightModelf
 @getCFun "libGL" glLightModeli glLightModeli(pname::GLenum,param::GLint)::Void
 export glLightModeli
-@getCFun "libGL" glLightModelfv glLightModelfv(pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glLightModelfv glLightModelfv(pname::GLenum,params::Ptr{GLfloat})::Void
 export glLightModelfv
-@getCFun "libGL" glLightModeliv glLightModeliv(pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glLightModeliv glLightModeliv(pname::GLenum,params::Ptr{GLint})::Void
 export glLightModeliv
 @getCFun "libGL" glMaterialf glMaterialf(face::GLenum,pname::GLenum,param::GLfloat)::Void
 export glMaterialf
 @getCFun "libGL" glMateriali glMateriali(face::GLenum,pname::GLenum,param::GLint)::Void
 export glMateriali
-@getCFun "libGL" glMaterialfv glMaterialfv(face::GLenum,pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glMaterialfv glMaterialfv(face::GLenum,pname::GLenum,params::Ptr{Float32})::Void
 export glMaterialfv
-@getCFun "libGL" glMaterialiv glMaterialiv(face::GLenum,pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glMaterialiv glMaterialiv(face::GLenum,pname::GLenum,params::Ptr{Uint8})::Void
 export glMaterialiv
-@getCFun "libGL" glGetMaterialfv glGetMaterialfv(face::GLenum,pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glGetMaterialfv glGetMaterialfv(face::GLenum,pname::GLenum,params::Ptr{Float32})::Void
 export glGetMaterialfv
-@getCFun "libGL" glGetMaterialiv glGetMaterialiv(face::GLenum,pname::GLenum,params::Ptr)::Void
+@getCFun "libGL" glGetMaterialiv glGetMaterialiv(face::GLenum,pname::GLenum,params::Ptr{Uint8})::Void
 export glGetMaterialiv
 @getCFun "libGL" glColorMaterial glColorMaterial(face::GLenum,mode::GLenum)::Void
 export glColorMaterial
@@ -549,7 +549,7 @@ export glGetPixelMapuiv
 export glGetPixelMapusv
 @getCFun "libGL" glBitmap glBitmap(width::GLsizei,height::GLsizei,xorig::GLfloat,yorig::GLfloat,xmove::GLfloat,ymove::GLfloat,bitmap::Ptr)::Void
 export glBitmap
-@getCFun "libGL" glReadPixels glReadPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr)::Void
+@getCFun "libGL" glReadPixels glReadPixels(x::GLint,y::GLint,width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr{Uint8})::Void
 export glReadPixels
 @getCFun "libGL" glDrawPixels glDrawPixels(width::GLsizei,height::GLsizei,format::GLenum,_type::GLenum,pixels::Ptr{Float64})::Void
 export glDrawPixels

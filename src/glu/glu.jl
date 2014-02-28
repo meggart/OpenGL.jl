@@ -157,6 +157,8 @@ export gluDisk
 export gluSphere
 @getCFun "libGLU" gluPartialDisk gluPartialDisk(quad::Ptr{Void},inner::GLdouble,outer::GLdouble,slices::GLint,loops::GLint,start::GLdouble,sweep::GLdouble)::Void
 export gluPartialDisk
+@getCFun "libGLU" gluQuadricDrawStyle gluQuadricDrawStyle(quad::Ptr{Void},style::GLenum)::Void
+export gluQuadricDrawStyle
 const GLU_EXT_object_space_tess       = 1
 const GLU_EXT_nurbs_tessellator       = 1
 const GLU_FALSE                       = 0
